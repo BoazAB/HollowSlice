@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417552932}
   - component: {fileID: 1417552931}
+  - component: {fileID: 1417552933}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -207,6 +208,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1417552933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417552930}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 824f199e5467000439d04f2d210960a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitLine: {fileID: 425797169091171392, guid: d28ee3c97201b7b4f91f0545ff4f3385, type: 3}
+  hitting: 0
 --- !u!1 &2065685398
 GameObject:
   m_ObjectHideFlags: 0
