@@ -9,16 +9,16 @@ public class SwingNail : MonoBehaviour
     public GameObject hitLine;
     private Vector3 rightPlace;
 
-    [SerializeField]
-    private bool attacking;
+    
+    public bool attacking;
 
     void Update()
     {
         if (Input.GetKeyDown("x") && attacking == false)
         {
-            Debug.Log("1" + attacking);
+            
             attacking = true;
-            Debug.Log("2" + attacking);
+            
             swing();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
@@ -39,7 +39,7 @@ public class SwingNail : MonoBehaviour
             newHit.transform.parent = this.gameObject.transform;
             Destroy(newHit, 1);
             StartCoroutine(waitToHit());
-            Debug.Log("3" + attacking);
+            
         }
         else if (!facingRight)
         {
@@ -48,7 +48,7 @@ public class SwingNail : MonoBehaviour
             newHit.transform.parent = this.gameObject.transform;
             Destroy(newHit, 1);
             StartCoroutine(waitToHit());
-            Debug.Log("3" + attacking);
+            
         }
     }
     IEnumerator waitToHit()
