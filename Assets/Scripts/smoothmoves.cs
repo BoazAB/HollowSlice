@@ -24,12 +24,12 @@ public class smoothmoves : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            playerRigidbody.velocity = new Vector3(-speed, 0) * Time.deltaTime;
+            transform.position += new Vector3(-speed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 180, 0);
         }
         else if (Input.GetKey(KeyCode.D))
         {
-            playerRigidbody.velocity = new Vector3(speed, 0) * Time.deltaTime;
+            transform.position += new Vector3(speed, 0) * Time.deltaTime;
             transform.rotation = Quaternion.Euler(0, 0, 0);
         }
 
