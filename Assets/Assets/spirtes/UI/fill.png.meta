@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e87774fc3947f0a43ba17e19e3845729
+guid: 2718855c35f577c4d9e8ad133dcd4bde
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -107,169 +107,127 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: geo2_0
+      name: fill_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 73
-        height: 164
+        width: 278
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab239b49468bb1944b448c8feb0057a6
-      internalID: 203009820
+      spriteID: e658b389f9d01e84e95956a7ecee2151
+      internalID: 1348080929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_1
+      name: fill_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 278
         y: 0
-        width: 90
-        height: 161
+        width: 282
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2165a3f84e2c64a8055d98fa9bb170
-      internalID: 2129220448
+      spriteID: 9e28d634015b87f4fb65cf8312a9638d
+      internalID: 681051015
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_2
+      name: fill_2
       rect:
         serializedVersion: 2
-        x: 267
+        x: 560
         y: 0
-        width: 109
-        height: 161
+        width: 282
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1abceb99cf9ae5448a8c741b0e69262d
-      internalID: 990485201
+      spriteID: b8250e6a77e9df749adc01c095e673ea
+      internalID: 796065700
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_3
+      name: fill_3
       rect:
         serializedVersion: 2
-        x: 428
+        x: 842
         y: 0
-        width: 128
-        height: 161
+        width: 283
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87772d7ea1bdfb4e85ec48f465bdee4
-      internalID: 911145424
+      spriteID: f27d9febbcec8a84ba43b6a9b74bb5ec
+      internalID: 1194457020
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_4
+      name: fill_4
       rect:
         serializedVersion: 2
-        x: 608
+        x: 1126
         y: 0
-        width: 123
-        height: 162
+        width: 280
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b00048eb22f80446b89c469583ccf84
-      internalID: 1569751185
+      spriteID: 09e43c28e0606c44082281f9194635b1
+      internalID: -110679521
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_5
+      name: fill_5
       rect:
         serializedVersion: 2
-        x: 783
+        x: 1406
         y: 0
-        width: 128
-        height: 159
+        width: 282
+        height: 178
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e81847769ff92c4fa5e70e915fa0f61
-      internalID: 796803034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_6
-      rect:
-        serializedVersion: 2
-        x: 963
-        y: 0
-        width: 109
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f2aaa65f1e2ecd44b5fa63e31e0fec7
-      internalID: 1759716509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_7
-      rect:
-        serializedVersion: 2
-        x: 1124
-        y: 0
-        width: 90
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d59015b585e784094441206d9aa4d2
-      internalID: 320163051
+      spriteID: 4eb84a391dab6ad4aaaf2fd48a50b7b0
+      internalID: -2116914809
       vertices: []
       indices: 
       edges: []
@@ -285,14 +243,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      geo2_7: 320163051
-      geo2_0: 203009820
-      geo2_5: 796803034
-      geo2_3: 911145424
-      geo2_1: 2129220448
-      geo2_6: 1759716509
-      geo2_4: 1569751185
-      geo2_2: 990485201
+      fill_0: 1348080929
+      fill_1: 681051015
+      fill_5: -2116914809
+      fill_4: -110679521
+      fill_2: 796065700
+      fill_3: 1194457020
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
