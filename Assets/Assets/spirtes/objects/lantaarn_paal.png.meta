@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e87774fc3947f0a43ba17e19e3845729
+guid: 565ebe7da9566944f9f435a1aefeb1b7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -107,13 +107,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: geo2_0
+      name: lantaarn_paal_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 73
-        height: 164
+        x: 551
+        y: 904
+        width: 311
+        height: 1385
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab239b49468bb1944b448c8feb0057a6
-      internalID: 203009820
+      spriteID: a38ccad89f30c6e4b8e17f22ac1303b8
+      internalID: 331435134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_1
+      name: lantaarn_paal_2
       rect:
         serializedVersion: 2
-        x: 125
-        y: 0
-        width: 90
-        height: 161
+        x: 1460
+        y: 910
+        width: 388
+        height: 1326
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,134 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2165a3f84e2c64a8055d98fa9bb170
-      internalID: 2129220448
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_2
-      rect:
-        serializedVersion: 2
-        x: 267
-        y: 0
-        width: 109
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1abceb99cf9ae5448a8c741b0e69262d
-      internalID: 990485201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_3
-      rect:
-        serializedVersion: 2
-        x: 428
-        y: 0
-        width: 128
-        height: 161
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c87772d7ea1bdfb4e85ec48f465bdee4
-      internalID: 911145424
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_4
-      rect:
-        serializedVersion: 2
-        x: 608
-        y: 0
-        width: 123
-        height: 162
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5b00048eb22f80446b89c469583ccf84
-      internalID: 1569751185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_5
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 0
-        width: 128
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e81847769ff92c4fa5e70e915fa0f61
-      internalID: 796803034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_6
-      rect:
-        serializedVersion: 2
-        x: 963
-        y: 0
-        width: 109
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f2aaa65f1e2ecd44b5fa63e31e0fec7
-      internalID: 1759716509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_7
-      rect:
-        serializedVersion: 2
-        x: 1124
-        y: 0
-        width: 90
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d59015b585e784094441206d9aa4d2
-      internalID: 320163051
+      spriteID: 753dc32880675ff4cae785ef3f3b9e7a
+      internalID: 690034140
       vertices: []
       indices: 
       edges: []
@@ -285,14 +159,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      geo2_7: 320163051
-      geo2_0: 203009820
-      geo2_5: 796803034
-      geo2_3: 911145424
-      geo2_1: 2129220448
-      geo2_6: 1759716509
-      geo2_4: 1569751185
-      geo2_2: 990485201
+      lantaarn_paal_0: 331435134
+      lantaarn_paal_1: -834524580
+      lantaarn_paal_2: 690034140
+      lantaarn_paal_3: 1250469108
+      lantaarn_paal_4: -1250171542
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

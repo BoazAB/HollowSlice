@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e87774fc3947f0a43ba17e19e3845729
+guid: 3ce7562b24bf1fb4dbcbfca24c22339a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,17 +103,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: geo2_0
+      name: InsideFillAnimation_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 3
         y: 0
-        width: 73
-        height: 164
+        width: 143
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab239b49468bb1944b448c8feb0057a6
-      internalID: 203009820
+      spriteID: a848fbd134f335b408edc4c2a184cc00
+      internalID: 636161651
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_1
+      name: InsideFillAnimation_1
       rect:
         serializedVersion: 2
-        x: 125
+        x: 162
         y: 0
-        width: 90
-        height: 161
+        width: 143
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2165a3f84e2c64a8055d98fa9bb170
-      internalID: 2129220448
+      spriteID: 142a9c4c012570b49b4ba3cbc2f06923
+      internalID: 1392853292
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_2
+      name: InsideFillAnimation_2
       rect:
         serializedVersion: 2
-        x: 267
+        x: 324
         y: 0
-        width: 109
-        height: 161
+        width: 143
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1abceb99cf9ae5448a8c741b0e69262d
-      internalID: 990485201
+      spriteID: e94a971b353e4784d80300d8c3710999
+      internalID: -1924593520
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_3
+      name: InsideFillAnimation_3
       rect:
         serializedVersion: 2
-        x: 428
+        x: 489
         y: 0
-        width: 128
-        height: 161
+        width: 143
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87772d7ea1bdfb4e85ec48f465bdee4
-      internalID: 911145424
+      spriteID: dce09a84871fe344a8e1562c87e8033c
+      internalID: -198208365
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_4
+      name: InsideFillAnimation_4
       rect:
         serializedVersion: 2
-        x: 608
+        x: 664
         y: 0
-        width: 123
-        height: 162
+        width: 143
+        height: 150
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,71 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b00048eb22f80446b89c469583ccf84
-      internalID: 1569751185
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_5
-      rect:
-        serializedVersion: 2
-        x: 783
-        y: 0
-        width: 128
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6e81847769ff92c4fa5e70e915fa0f61
-      internalID: 796803034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_6
-      rect:
-        serializedVersion: 2
-        x: 963
-        y: 0
-        width: 109
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f2aaa65f1e2ecd44b5fa63e31e0fec7
-      internalID: 1759716509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_7
-      rect:
-        serializedVersion: 2
-        x: 1124
-        y: 0
-        width: 90
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d59015b585e784094441206d9aa4d2
-      internalID: 320163051
+      spriteID: cdad38e30d3b62742b4534294e29fd0f
+      internalID: 843045762
       vertices: []
       indices: 
       edges: []
@@ -285,14 +246,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      geo2_7: 320163051
-      geo2_0: 203009820
-      geo2_5: 796803034
-      geo2_3: 911145424
-      geo2_1: 2129220448
-      geo2_6: 1759716509
-      geo2_4: 1569751185
-      geo2_2: 990485201
+      InsideFillAnimation_0: 636161651
+      InsideFillAnimation_4: 843045762
+      InsideFillAnimation_3: -198208365
+      InsideFillAnimation_2: -1924593520
+      InsideFillAnimation_1: 1392853292
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

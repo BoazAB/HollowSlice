@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e87774fc3947f0a43ba17e19e3845729
+guid: 675969a341252714e8636005fe06e945
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,17 +103,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: geo2_0
+      name: LivesShineAnimation_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 73
-        height: 164
+        y: 3
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab239b49468bb1944b448c8feb0057a6
-      internalID: 203009820
+      spriteID: 0e0334a38b11b0a47843c5f15efd2c60
+      internalID: 651548438
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_1
+      name: LivesShineAnimation_1
       rect:
         serializedVersion: 2
-        x: 125
-        y: 0
-        width: 90
-        height: 161
+        x: 54
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2165a3f84e2c64a8055d98fa9bb170
-      internalID: 2129220448
+      spriteID: f0901540b5c508b4f86d7bf04224bcf4
+      internalID: -360292113
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_2
+      name: LivesShineAnimation_2
       rect:
         serializedVersion: 2
-        x: 267
-        y: 0
-        width: 109
-        height: 161
+        x: 106
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1abceb99cf9ae5448a8c741b0e69262d
-      internalID: 990485201
+      spriteID: 7a9d7ab08cd0c9a48873a1088393e1ec
+      internalID: 653598123
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_3
+      name: LivesShineAnimation_3
       rect:
         serializedVersion: 2
-        x: 428
-        y: 0
-        width: 128
-        height: 161
+        x: 161
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87772d7ea1bdfb4e85ec48f465bdee4
-      internalID: 911145424
+      spriteID: 8a831c0227381834b9478648369402a2
+      internalID: -11259658
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_4
+      name: LivesShineAnimation_4
       rect:
         serializedVersion: 2
-        x: 608
-        y: 0
-        width: 123
-        height: 162
+        x: 219
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b00048eb22f80446b89c469583ccf84
-      internalID: 1569751185
+      spriteID: 8db9d806d10074f49afcb68c12a37797
+      internalID: 445932489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_5
+      name: LivesShineAnimation_5
       rect:
         serializedVersion: 2
-        x: 783
-        y: 0
-        width: 128
-        height: 159
+        x: 278
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e81847769ff92c4fa5e70e915fa0f61
-      internalID: 796803034
+      spriteID: 39c51218d2453d142951400988cec761
+      internalID: 1137030664
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_6
+      name: LivesShineAnimation_6
       rect:
         serializedVersion: 2
-        x: 963
-        y: 0
-        width: 109
-        height: 159
+        x: 336
+        y: 1
+        width: 45
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f2aaa65f1e2ecd44b5fa63e31e0fec7
-      internalID: 1759716509
+      spriteID: ecacecda40858024293946980b2cc248
+      internalID: -691653432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_7
+      name: LivesShineAnimation_7
       rect:
         serializedVersion: 2
-        x: 1124
-        y: 0
-        width: 90
-        height: 159
+        x: 400
+        y: 1
+        width: 45
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +292,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 67d59015b585e784094441206d9aa4d2
-      internalID: 320163051
+      spriteID: ba9ca7370cd6f34499230752d41c2ea0
+      internalID: 1948744127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LivesShineAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 0
+        width: 46
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ef277d615455ca40ae6d206226792f2
+      internalID: -408177387
       vertices: []
       indices: 
       edges: []
@@ -285,14 +330,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      geo2_7: 320163051
-      geo2_0: 203009820
-      geo2_5: 796803034
-      geo2_3: 911145424
-      geo2_1: 2129220448
-      geo2_6: 1759716509
-      geo2_4: 1569751185
-      geo2_2: 990485201
+      LivesShineAnimation_1: -360292113
+      LivesShineAnimation_5: 1137030664
+      LivesShineAnimation_8: -408177387
+      LivesShineAnimation_6: -691653432
+      LivesShineAnimation_3: -11259658
+      LivesShineAnimation_2: 653598123
+      LivesShineAnimation_7: 1948744127
+      LivesShineAnimation_0: 651548438
+      LivesShineAnimation_4: 445932489
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

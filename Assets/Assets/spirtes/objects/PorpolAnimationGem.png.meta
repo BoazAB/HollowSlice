@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: e87774fc3947f0a43ba17e19e3845729
+guid: 3bd57e76b7e6e1847b90d4d888bbf9ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,17 +103,83 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: geo2_0
+      name: PorpolAnimationGem_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1
+        width: 83
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaec20675c1f8540a572af692ba6aa1
+      internalID: -410878808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorpolAnimationGem_1
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 1
+        width: 86
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c0a06c1e07fd7f43ac69403d671e4b5
+      internalID: -2032864720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PorpolAnimationGem_2
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 2
         width: 73
-        height: 164
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +187,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab239b49468bb1944b448c8feb0057a6
-      internalID: 203009820
+      spriteID: 8682b6d7d1830d74cb5689e753fc52d3
+      internalID: 862430524
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_1
+      name: PorpolAnimationGem_3
       rect:
         serializedVersion: 2
-        x: 125
-        y: 0
-        width: 90
-        height: 161
+        x: 344
+        y: 3
+        width: 60
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2b2165a3f84e2c64a8055d98fa9bb170
-      internalID: 2129220448
+      spriteID: 02b73dc8bec08c344b7e899aca5f7bfe
+      internalID: -588548717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_2
+      name: PorpolAnimationGem_4
       rect:
         serializedVersion: 2
-        x: 267
-        y: 0
-        width: 109
-        height: 161
+        x: 431
+        y: 1
+        width: 49
+        height: 111
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +229,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1abceb99cf9ae5448a8c741b0e69262d
-      internalID: 990485201
+      spriteID: 948ec9580eff38d44865a27679e2a501
+      internalID: -1936576826
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_3
+      name: PorpolAnimationGem_5
       rect:
         serializedVersion: 2
-        x: 428
-        y: 0
-        width: 128
-        height: 161
+        x: 519
+        y: 2
+        width: 60
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +250,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87772d7ea1bdfb4e85ec48f465bdee4
-      internalID: 911145424
+      spriteID: 210a58543ae855a4d822553e3bf01d96
+      internalID: 118493931
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_4
+      name: PorpolAnimationGem_6
       rect:
         serializedVersion: 2
-        x: 608
-        y: 0
-        width: 123
-        height: 162
+        x: 611
+        y: 1
+        width: 73
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,20 +271,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b00048eb22f80446b89c469583ccf84
-      internalID: 1569751185
+      spriteID: ca36c4850f0af804f8e7c056a9364cbb
+      internalID: -517439699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: geo2_5
+      name: PorpolAnimationGem_7
       rect:
         serializedVersion: 2
-        x: 783
+        x: 730
         y: 0
-        width: 128
-        height: 159
+        width: 86
+        height: 108
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,50 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6e81847769ff92c4fa5e70e915fa0f61
-      internalID: 796803034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_6
-      rect:
-        serializedVersion: 2
-        x: 963
-        y: 0
-        width: 109
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9f2aaa65f1e2ecd44b5fa63e31e0fec7
-      internalID: 1759716509
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: geo2_7
-      rect:
-        serializedVersion: 2
-        x: 1124
-        y: 0
-        width: 90
-        height: 159
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 67d59015b585e784094441206d9aa4d2
-      internalID: 320163051
+      spriteID: b64b26e6394725f448fc3db6986067c5
+      internalID: 1333809825
       vertices: []
       indices: 
       edges: []
@@ -285,14 +309,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      geo2_7: 320163051
-      geo2_0: 203009820
-      geo2_5: 796803034
-      geo2_3: 911145424
-      geo2_1: 2129220448
-      geo2_6: 1759716509
-      geo2_4: 1569751185
-      geo2_2: 990485201
+      PorpolAnimationGem_4: -1936576826
+      PorpolAnimationGem_6: -517439699
+      PorpolAnimationGem_2: 862430524
+      PorpolAnimationGem_5: 118493931
+      PorpolAnimationGem_1: -2032864720
+      PorpolAnimationGem_0: -410878808
+      PorpolAnimationGem_7: 1333809825
+      PorpolAnimationGem_3: -588548717
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

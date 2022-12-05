@@ -10,13 +10,11 @@ public class SwingNail : MonoBehaviour
     public GameObject hitLine;
     public GameObject hitUp;
     private Vector3 rightPlace;
-
     [SerializeField]
     private bool up;
 
     [SerializeField]
     private bool attacking;
-
     private void Start()
     {
     }
@@ -57,14 +55,6 @@ public class SwingNail : MonoBehaviour
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x + 1f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
             var newHit = Instantiate(hitLine, rightPlace, Quaternion.identity.normalized);
-            newHit.transform.parent = this.gameObject.transform;
-            Destroy(newHit, 1);
-            StartCoroutine(waitToHit());
-        }
-        else if (!facingRight)
-        {
-            rightPlace = new Vector3(this.gameObject.transform.position.x + -1f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
-            var newHit = Instantiate(hitLine, rightPlace, Quaternion.identity);
             newHit.transform.parent = this.gameObject.transform;
             Destroy(newHit, 1);
             StartCoroutine(waitToHit());
