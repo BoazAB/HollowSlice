@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a15273449841b91479a0d15f97bc0da3
+guid: df4c9ba15dad86e4b8d454456fd049b7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: birdges_0
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 1453
+        width: 1272
+        height: 458
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45d9f75605c80be48a371805a24aff13
+      internalID: 8596374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: birdges_1
+      rect:
+        serializedVersion: 2
+        x: 1395
+        y: 1426
+        width: 1069
+        height: 454
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f16f9e989312bf4d9927aec18d70eb1
+      internalID: 666707021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +158,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      birdges_0: 8596374
+      birdges_1: 666707021
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a15273449841b91479a0d15f97bc0da3
+guid: 565ebe7da9566944f9f435a1aefeb1b7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -105,7 +105,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: lantaarn_paal_0
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 904
+        width: 311
+        height: 1385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a38ccad89f30c6e4b8e17f22ac1303b8
+      internalID: 331435134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lantaarn_paal_2
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 910
+        width: 388
+        height: 1326
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753dc32880675ff4cae785ef3f3b9e7a
+      internalID: 690034140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -116,7 +158,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lantaarn_paal_0: 331435134
+      lantaarn_paal_1: -834524580
+      lantaarn_paal_2: 690034140
+      lantaarn_paal_3: 1250469108
+      lantaarn_paal_4: -1250171542
   spritePackingTag: 
   pSDRemoveMatte: 0
   userData: 
