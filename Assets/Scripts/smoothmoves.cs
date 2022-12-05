@@ -22,6 +22,9 @@ public class smoothmoves : MonoBehaviour
     private float jumpTimeCount;
     private bool jumping;
 
+    [Header("dash")]
+    [SerializeField] private float dash;
+    
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
