@@ -32,7 +32,7 @@ public class smoothmoves : MonoBehaviour
     }
 
     
-    void Update()
+    void FixedUpdate()
     {
         Movement();
         Jump();
