@@ -13,7 +13,6 @@ public class SwingNail : MonoBehaviour
 
     [SerializeField]
     private bool Up;
-
     public bool attacking;
     private void Start()
     {
