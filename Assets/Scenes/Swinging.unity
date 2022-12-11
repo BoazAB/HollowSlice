@@ -1168,6 +1168,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c237eb6dc98f48741811ecd8e92abce0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HP: 0
+  NumMasks: 0
+  Masks: []
+  WholeMask: {fileID: 21300000, guid: c7fc6a1e7b2baf64a85ef70cfaedd576, type: 3}
+  BrokenMask: {fileID: 21300000, guid: 66d9878dc01154c4f964ba363d64b885, type: 3}
 --- !u!1 &1692084166
 GameObject:
   m_ObjectHideFlags: 0
