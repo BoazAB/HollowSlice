@@ -9092,7 +9092,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 3.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -9136,8 +9136,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ee2ca0fa7da10c48ac1c1c8824932c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  jumpheigt: 9
+  speed: 8
+  jumpheigt: 10
   point: {fileID: 1172392885}
   radius: 0.4
   groundstuff:
@@ -9158,7 +9158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitLine: {fileID: 425797169091171392, guid: d28ee3c97201b7b4f91f0545ff4f3385, type: 3}
-  hitUp: {fileID: 0}
+  hitUp: {fileID: 1681190719070440830, guid: 41c5ef0a9a0f80f49a6139fac64a8e14, type: 3}
   Up: 0
   attacking: 0
 --- !u!212 &1363738397
