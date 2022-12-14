@@ -62,7 +62,7 @@ public class SwingNail : MonoBehaviour
         else if (!facingRight)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x + -1f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
-            var newHit = Instantiate(hitLine, rightPlace, Quaternion.identity.normalized);
+            var newHit = Instantiate(hitLine, rightPlace, Quaternion.Euler(0, 180, 0));
             newHit.transform.parent = this.gameObject.transform;
             Destroy(newHit, 1);
             StartCoroutine(waitToHit());

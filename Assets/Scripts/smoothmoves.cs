@@ -35,12 +35,13 @@ public class smoothmoves : MonoBehaviour
     void FixedUpdate()
     {
         Movement();
-        Jump();
+        
     }
 
     private void Update()
     {
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
+        Jump();
     }
     void Movement()
     {
