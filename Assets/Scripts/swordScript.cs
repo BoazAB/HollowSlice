@@ -5,6 +5,10 @@ using UnityEngine;
 public class swordScript : MonoBehaviour
 {
 
+    //Laat de aanpassende snelheid zien
+    [SerializeField]
+    float health, maxHealth = 1f;
+
     //Array of waypoints to walk from one to the other
     [SerializeField]
     private Transform[] waypoints;
@@ -12,7 +16,7 @@ public class swordScript : MonoBehaviour
 
     //Walk speed that can be set in Inspector
     [SerializeField]
-    private float moveSpeed = 2f;
+    private float moveSpeed = 3f;
 
     //Index of current waypoint from which Enemy walks to the next one
 
@@ -24,6 +28,9 @@ public class swordScript : MonoBehaviour
         // Set position of Enemy as position of the first waypoint
         transform.position = waypoints[waypointIndex].transform.position;
         Debug.Log("Start");
+
+        // Houdt health op maxHealth elke keer wanneer het spel begint
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -58,5 +65,17 @@ public class swordScript : MonoBehaviour
             }
         }
         Debug.Log("Move");
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        //Health is being reduced
+        health -= damageAmount;
+
+        //enemy will be destroyed if health reaches 0
+        if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }
