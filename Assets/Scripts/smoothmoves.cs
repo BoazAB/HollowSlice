@@ -6,7 +6,6 @@ public class smoothmoves : MonoBehaviour
 {
     [Header("movement")]
     [SerializeField] private int speed;
-    [SerializeField] private int jumpheigt;
     private Rigidbody2D playerRigidbody;
 
     private SwingNail state;
@@ -19,16 +18,21 @@ public class smoothmoves : MonoBehaviour
 
     [Header("Jumping")]
     [SerializeField] private float jumpTime;
+    [SerializeField] private int jumpheigt;
     private float jumpTimeCount;
     private bool jumping;
 
     [Header("dash")]
-    [SerializeField] private float dash;
+    [SerializeField] private float dashSpeed;
+    [SerializeField] private float dashTime;
+    public float StartDash;
+    private int direction;
     
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         state = GetComponent<SwingNail>();
+        dashTime = StartDash;
     }
 
     
@@ -42,6 +46,7 @@ public class smoothmoves : MonoBehaviour
     {
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
+        Dash();
     }
     void Movement()
     {
@@ -89,6 +94,44 @@ public class smoothmoves : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Z))
         {
             jumping = false;
+        }
+    }
+
+    void Dash()
+    {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            direction = 1;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            direction = 2;
+        }
+
+        if (dashTime <= 0)
+        {
+            dashTime = StartDash;
+            
+
+            if (direction == 1 && Input.GetKeyDown(KeyCode.C))
+            {
+                playerRigidbody.velocity = Vector2.left * dashSpeed;
+                playerRigidbody.gravityScale = 0;
+            }
+            else if (playerRigidbody.gravityScale == 0)
+            {
+                playerRigidbody.gravityScale = 3.5f;
+            }
+
+            if (direction == 2 && Input.GetKeyDown(KeyCode.C))
+            {
+                playerRigidbody.velocity = Vector2.right * dashSpeed;
+                playerRigidbody.gravityScale = 0;
+            }
+            else if (playerRigidbody.gravityScale == 0)
+            {
+                playerRigidbody.gravityScale = 3.5f;
+            }
         }
     }
 }
