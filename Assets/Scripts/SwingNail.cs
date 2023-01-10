@@ -11,8 +11,11 @@ public class SwingNail : MonoBehaviour
     public GameObject hitUp;
     private Vector3 rightPlace;
 
-    [SerializeField]
-    private bool Up;
+    smoothmoves onground;
+
+    private bool up;
+    private bool down;
+
 
     public bool attacking;
     private void Start()
@@ -35,16 +38,32 @@ public class SwingNail : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            Up = true;
+            up = true;
         }
         if (Input.GetKeyUp(KeyCode.UpArrow))
         {
-            Up = false;
+            up = false;
+        }
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            down = true;
+        }
+        if (Input.GetKeyUp(KeyCode.DownArrow))
+        {
+            down = false;
         }
     }
     private void swing()
     {
-        if (Up == true)
+        if (onground == false && down == true)
+        {
+            rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.rotation.z);
+            var newHit = Instantiate(hitUp, rightPlace, Quaternion.identity);
+            newHit.transform.parent = this.gameObject.transform;
+            Destroy(newHit, 1);
+            StartCoroutine(waitToHit());
+        }
+        else if (up == true)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 1, this.gameObject.transform.rotation.z);
             var newHit = Instantiate(hitUp, rightPlace, Quaternion.identity);
