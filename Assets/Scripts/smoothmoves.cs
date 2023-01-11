@@ -13,7 +13,7 @@ public class smoothmoves : MonoBehaviour
 
     [Header("ground checks")]
     [SerializeField] private Transform point;
-    private bool onground;
+    public bool onground;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask groundstuff;
 
@@ -85,7 +85,7 @@ public class smoothmoves : MonoBehaviour
             {
                 jumping = false;
             }
-        }
+         }
         if (Input.GetKeyUp(KeyCode.Z))
         {
             jumping = false;
