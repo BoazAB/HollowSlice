@@ -12,27 +12,30 @@ public class smoothmoves : MonoBehaviour
 
     [Header("ground checks")]
     [SerializeField] private Transform point;
-    private bool onground;
+    public bool onground;
     [SerializeField] private float radius;
     [SerializeField] private LayerMask groundstuff;
 
     [Header("Jumping")]
     [SerializeField] private float jumpTime;
     [SerializeField] private int jumpheigt;
+    [SerializeField] private int maxjump;
+    private int jumpcount;
     private float jumpTimeCount;
+    private float secjumpTimeCount;
     private bool jumping;
+    private bool secjump;
 
     [Header("dash")]
     [SerializeField] private float dashSpeed;
     [SerializeField] private float dashTime;
-    public float StartDash;
+    private float dashTimecount;
     private int direction;
-    
+
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         state = GetComponent<SwingNail>();
-        dashTime = StartDash;
     }
 
     
@@ -71,6 +74,7 @@ public class smoothmoves : MonoBehaviour
     }
     void Jump()
     {
+        
         if (onground == true && Input.GetKeyDown(KeyCode.Z))
         {
             jumping = true;
@@ -80,20 +84,49 @@ public class smoothmoves : MonoBehaviour
 
         if (Input.GetKey(KeyCode.Z) && jumping == true)
         {
+            Debug.Log("Nstart " + secjump);
             if (jumpTimeCount > 0)
             {
                 playerRigidbody.velocity = Vector2.up * jumpheigt;
                 jumpTimeCount -= Time.deltaTime;
-
+                Debug.Log("Nendjump " + secjump);
             }
             else
             {
                 jumping = false;
             }
+            Debug.Log("Nend " + secjump);
         }
+
+
+        if (onground == true && Input.GetKeyDown(KeyCode.Z))
+        {
+            secjumpTimeCount = jumpTime;
+            playerRigidbody.velocity = Vector2.up * jumpheigt;
+            Debug.Log("Scheck " + secjump);
+        }
+
+        if (Input.GetKey(KeyCode.Z) && (onground == false && secjump == true))
+        {
+            Debug.Log("Sstart " + secjump);
+            if (secjumpTimeCount > 0)
+            {
+                playerRigidbody.velocity = Vector2.up * jumpheigt;
+                secjumpTimeCount -= Time.deltaTime;
+                Debug.Log("Sendjump " + secjump);
+            }
+            else
+            {
+                secjump = false;
+            }
+            Debug.Log("Send " + secjump);
+        }
+
         if (Input.GetKeyUp(KeyCode.Z))
         {
             jumping = false;
+            secjump= true;
+            Debug.Log("reset " + secjump);
         }
     }
 
@@ -108,30 +141,24 @@ public class smoothmoves : MonoBehaviour
             direction = 2;
         }
 
-        if (dashTime <= 0)
+        if (direction == 1 && Input.GetKeyDown(KeyCode.C))
         {
-            dashTime = StartDash;
-            
-
-            if (direction == 1 && Input.GetKeyDown(KeyCode.C))
+            dashTimecount = dashTime;
+            if (dashTimecount >= 0)
             {
                 playerRigidbody.velocity = Vector2.left * dashSpeed;
-                playerRigidbody.gravityScale = 0;
+                dashTimecount -= Time.deltaTime;
             }
-            else if (playerRigidbody.gravityScale == 0)
-            {
-                playerRigidbody.gravityScale = 3.5f;
-            }
-
-            if (direction == 2 && Input.GetKeyDown(KeyCode.C))
+                
+        }
+        if (direction == 2 && Input.GetKeyDown(KeyCode.C))
+        {
+            if (dashTimecount >= 0)
             {
                 playerRigidbody.velocity = Vector2.right * dashSpeed;
-                playerRigidbody.gravityScale = 0;
+                dashTimecount -= Time.deltaTime;
             }
-            else if (playerRigidbody.gravityScale == 0)
-            {
-                playerRigidbody.gravityScale = 3.5f;
-            }
+            
         }
     }
 }

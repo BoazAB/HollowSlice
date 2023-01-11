@@ -10,7 +10,6 @@ public class SwingNail : MonoBehaviour
     public GameObject hitLine;
     public GameObject hitUp;
     private Vector3 rightPlace;
-
     [SerializeField]
     private bool Up;
     public bool attacking;
