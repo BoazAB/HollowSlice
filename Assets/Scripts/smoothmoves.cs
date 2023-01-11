@@ -122,6 +122,7 @@ public class smoothmoves : MonoBehaviour
             Debug.Log("Send " + secjump);
         }
 
+
         if (Input.GetKeyUp(KeyCode.Z))
         {
             jumping = false;
