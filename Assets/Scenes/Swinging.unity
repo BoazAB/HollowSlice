@@ -974,6 +974,7 @@ GameObject:
   - component: {fileID: 1350656302}
   - component: {fileID: 1350656301}
   - component: {fileID: 1350656303}
+  - component: {fileID: 1350656304}
   m_Layer: 0
   m_Name: TempEnemy
   m_TagString: Enemy
@@ -1074,6 +1075,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1350656304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350656299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 000de2944d6384649847835a7c814a3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1417552930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1178,7 +1191,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitLine: {fileID: 425797169091171392, guid: d28ee3c97201b7b4f91f0545ff4f3385, type: 3}
   hitUp: {fileID: 1681190719070440830, guid: 41c5ef0a9a0f80f49a6139fac64a8e14, type: 3}
-  Up: 0
+  hitDown: {fileID: 1825903076941342762, guid: 6523a2cb975d0e740a6fea6dacfe1846, type: 3}
+  groundCheck: 0
   attacking: 0
 --- !u!114 &1417552934
 MonoBehaviour:
@@ -1195,6 +1209,7 @@ MonoBehaviour:
   speed: 8
   jumpheigt: 8
   point: {fileID: 1170204489}
+  onground: 0
   radius: 0.1
   groundstuff:
     serializedVersion: 2
@@ -1253,6 +1268,7 @@ MonoBehaviour:
   HealthText: {fileID: 302359455}
   HP: 9
   numOfMask: 9
+  hurtbox: {fileID: 1417552935}
   Masks:
   - {fileID: 1777018626}
   - {fileID: 31104742}

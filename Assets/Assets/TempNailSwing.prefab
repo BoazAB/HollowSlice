@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5337852169692821650}
   m_Layer: 0
   m_Name: TempNailSwing
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,12 +179,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 6664396888191093703}
     m_Modifications:
     - target: {fileID: 91566925947599190, guid: cea9d50ed280d36418ca245d9be8920c, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 91566925947599190, guid: cea9d50ed280d36418ca245d9be8920c, type: 3}
       propertyPath: m_Name
       value: SwingHitbox
       objectReference: {fileID: 0}
     - target: {fileID: 91566925947599190, guid: cea9d50ed280d36418ca245d9be8920c, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 91566925947599190, guid: cea9d50ed280d36418ca245d9be8920c, type: 3}
+      propertyPath: m_TagString
+      value: Attack
       objectReference: {fileID: 0}
     - target: {fileID: 91566925947599191, guid: cea9d50ed280d36418ca245d9be8920c, type: 3}
       propertyPath: m_IsTrigger

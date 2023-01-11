@@ -17,9 +17,10 @@ public class EnemyDamage : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "attack")
+        if (collision.tag == "Attack")
         {
-
+            Debug.Log("BEPEOEPEO");
+           /* Destroy(this.gameObject);*/
         }
     }
 }

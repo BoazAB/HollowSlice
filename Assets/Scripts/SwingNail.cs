@@ -9,9 +9,11 @@ public class SwingNail : MonoBehaviour
     private bool facingRight;
     public GameObject hitLine;
     public GameObject hitUp;
+    public GameObject hitDown;
     private Vector3 rightPlace;
 
-    smoothmoves onground;
+    private smoothmoves move;
+    public bool groundCheck;
 
     private bool up;
     private bool down;
@@ -20,9 +22,11 @@ public class SwingNail : MonoBehaviour
     public bool attacking;
     private void Start()
     {
+        move = GetComponent<smoothmoves>();
     }
     void Update()
     {
+        groundCheck = move.onground;
         if (Input.GetKeyDown("x") && attacking == false)
         {
             attacking = true;
@@ -55,10 +59,10 @@ public class SwingNail : MonoBehaviour
     }
     private void swing()
     {
-        if (onground == false && down == true)
+        if (groundCheck == false && down == true)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.rotation.z);
-            var newHit = Instantiate(hitUp, rightPlace, Quaternion.identity);
+            var newHit = Instantiate(hitDown, rightPlace, Quaternion.identity);
             newHit.transform.parent = this.gameObject.transform;
             Destroy(newHit, 1);
             StartCoroutine(waitToHit());

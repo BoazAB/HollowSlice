@@ -9,6 +9,7 @@ public class PlayerHealth : MonoBehaviour
 
     public int HP;
     public int numOfMask;
+    public Collider2D hurtbox;
 
     public Image[] Masks;
     public Sprite WholeMask;
@@ -53,9 +54,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D hurtbox)
     {
-        if (collision.tag == "Enemy")
+        if (hurtbox.tag == "Enemy")
         {
             Debug.Log("everybody wants to be, my");
             GotHit();
