@@ -9,16 +9,29 @@ public class SwingNail : MonoBehaviour
     private bool facingRight;
     public GameObject hitLine;
     public GameObject hitUp;
+    public GameObject hitDown;
     private Vector3 rightPlace;
-    smoothmoves onground;
+
+    private smoothmoves move;
+    public bool groundCheck;
+
     private bool up;
     private bool down;
+
+    [SerializeField]
+    private int knockback;
+    private Rigidbody2D playerRigidbody;
+
+
     public bool attacking;
     private void Start()
     {
+        playerRigidbody = GetComponent<Rigidbody2D>();
+        move = GetComponent<smoothmoves>();
     }
     void Update()
     {
+        groundCheck = move.onground;
         if (Input.GetKeyDown("x") && attacking == false)
         {
             attacking = true;
@@ -51,12 +64,12 @@ public class SwingNail : MonoBehaviour
     }
     private void swing()
     {
-        if (onground == false && down == true)
+        if (groundCheck == false && down == true)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.rotation.z);
-            var newHit = Instantiate(hitUp, rightPlace, Quaternion.identity);
-            newHit.transform.parent = this.gameObject.transform;
-            Destroy(newHit, 1);
+            var downHit = Instantiate(hitDown, rightPlace, Quaternion.identity);
+            downHit.transform.parent = this.gameObject.transform;
+            Destroy(downHit, 1);
             StartCoroutine(waitToHit());
         }
         else if (up == true)
@@ -88,6 +101,15 @@ public class SwingNail : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         attacking = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D coll)
+    {
+        if (coll.tag == "Enemy" && groundCheck == false && down == true)
+        {
+            Debug.Log("knockback");
+            playerRigidbody.velocity = Vector2.up * knockback;
+        }
     }
 }
 

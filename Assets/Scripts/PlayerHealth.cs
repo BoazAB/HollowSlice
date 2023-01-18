@@ -10,15 +10,19 @@ public class PlayerHealth : MonoBehaviour
 
     public int HP;
     public int numOfMask;
+    public Collider2D hurtbox;
 
     public Image[] Masks;
     public Sprite WholeMask;
     public Sprite BrokenMask;
 
+    private float invTime;
+    public float invTimer;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        invTimer = invTime;
     }
 
     // Update is called once per frame
@@ -54,9 +58,9 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D hurtbox)
     {
-        if (collision.tag == "Enemy")
+        if (hurtbox.gameObject.tag == "Enemy")
         {
             Debug.Log("everybody wants to be, my");
             GotHit();
@@ -65,9 +69,15 @@ public class PlayerHealth : MonoBehaviour
 
     private void GotHit()
     {
-        HP--;
-
-
-        Thread.Sleep(500);
+        if (invTime > 0)
+        {
+            invTime -= Time.deltaTime;
+        }
+        else
+        {
+            HP--;
+            invTimer = invTime;
+            Thread.Sleep(500);
+        }
     }
 }
