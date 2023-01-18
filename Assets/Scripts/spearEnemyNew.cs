@@ -2,17 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class spearEnemyChase : MonoBehaviour
+public class spearEnemyNew : MonoBehaviour
 {
     public GameObject player;
     public float speed;
+    public GameObject spearLeft;
+    public Transform spearLeftPos;
+
 
     private float distance;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("placeHolderPlayer");
     }
 
     /* private void Update()
@@ -37,10 +41,33 @@ public class spearEnemyChase : MonoBehaviour
 
         transform.localScale = scale;
 
-        distance = Vector2.Distance(transform.position, player.transform.position);
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        Debug.Log(distance);
+
         Vector2 direction = player.transform.position - transform.position;
 
         transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+
+        float distanceEnemyAndPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+        if(distance < 8)
+        {
+            timer += Time.deltaTime;
+
+            if (timer > 2)
+            {
+                timer = 0;
+                shoot();
+            }
+        }
+
+    }
+
+    void shoot()
+    {
+        Instantiate(spearLeft, spearLeftPos.position, Quaternion.identity);
     }
 
 }

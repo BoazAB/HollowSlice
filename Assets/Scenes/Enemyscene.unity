@@ -561,9 +561,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94340aa826e7b4e418578dfb29edcb5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spear: {fileID: 1862127757854561397, guid: 78f81022888999647a244dd411b1d053, type: 3}
-  spearPos: {fileID: 30184219}
-  timer: 0
 --- !u!114 &1593767960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -578,6 +575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 2144497217}
   speed: 1
+  spearLeft: {fileID: 1862127757854561397, guid: 78f81022888999647a244dd411b1d053, type: 3}
+  spearLeftPos: {fileID: 30184219}
 --- !u!1 &2144497217
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,7 +591,7 @@ GameObject:
   - component: {fileID: 2144497221}
   m_Layer: 0
   m_Name: placeHolderPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
