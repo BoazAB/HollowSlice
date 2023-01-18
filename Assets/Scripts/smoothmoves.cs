@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using System.Threading;
 using UnityEngine;
 
 public class smoothmoves : MonoBehaviour
@@ -41,15 +43,27 @@ public class smoothmoves : MonoBehaviour
     
     void FixedUpdate()
     {
-        Movement();
-        
+        Movement(); 
     }
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            direction = 1;
+        }
+        else if (Input.GetKey(KeyCode.RightArrow))
+        {
+            direction = 2;
+        }
+
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
-        Dash();
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Dash();
+            playerRigidbody.gravityScale = 3.5f;
+        }
     }
     void Movement()
     {
@@ -80,22 +94,23 @@ public class smoothmoves : MonoBehaviour
             jumping = true;
             jumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
+            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && jumping == true)
         {
-            Debug.Log("Nstart " + secjump);
+      
             if (jumpTimeCount > 0)
             {
                 playerRigidbody.velocity = Vector2.up * jumpheigt;
                 jumpTimeCount -= Time.deltaTime;
-                Debug.Log("Nendjump " + secjump);
+    
             }
             else
             {
                 jumping = false;
             }
-            Debug.Log("Nend " + secjump);
+
         }
 
 
@@ -103,23 +118,23 @@ public class smoothmoves : MonoBehaviour
         {
             secjumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
-            Debug.Log("Scheck " + secjump);
+            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && (onground == false && secjump == true))
         {
-            Debug.Log("Sstart " + secjump);
+
             if (secjumpTimeCount > 0)
             {
                 playerRigidbody.velocity = Vector2.up * jumpheigt;
                 secjumpTimeCount -= Time.deltaTime;
-                Debug.Log("Sendjump " + secjump);
+
             }
             else
             {
                 secjump = false;
             }
-            Debug.Log("Send " + secjump);
+
         }
 
 
@@ -127,39 +142,22 @@ public class smoothmoves : MonoBehaviour
         {
             jumping = false;
             secjump= true;
-            Debug.Log("reset " + secjump);
+
         }
     }
 
     void Dash()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (direction == 1 )
         {
-            direction = 1;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = 2;
+                playerRigidbody.velocity = Vector2.left * dashSpeed;
+                playerRigidbody.gravityScale = 0;
         }
 
-        if (direction == 1 && Input.GetKeyDown(KeyCode.C))
+        if (direction == 2 )
         {
-            dashTimecount = dashTime;
-            if (dashTimecount >= 0)
-            {
-                playerRigidbody.velocity = Vector2.left * dashSpeed;
-                dashTimecount -= Time.deltaTime;
-            }
-                
-        }
-        if (direction == 2 && Input.GetKeyDown(KeyCode.C))
-        {
-            if (dashTimecount >= 0)
-            {
                 playerRigidbody.velocity = Vector2.right * dashSpeed;
-                dashTimecount -= Time.deltaTime;
-            }
-            
+                playerRigidbody.gravityScale = 0;
         }
     }
 }
