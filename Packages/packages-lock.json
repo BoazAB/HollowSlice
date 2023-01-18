@@ -165,11 +165,9 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-<<<<<<< Updated upstream
     "com.unity.render-pipelines.core": {
       "version": "13.1.8",
       "depth": 0,
-=======
     "com.unity.recorder": {
       "version": "3.0.3",
       "depth": 0,
@@ -182,7 +180,6 @@
     "com.unity.render-pipelines.core": {
       "version": "13.1.8",
       "depth": 1,
->>>>>>> Stashed changes
       "source": "builtin",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
@@ -228,7 +225,6 @@
         "com.unity.searcher": "4.9.2"
       }
     },
-<<<<<<< Updated upstream
     "com.unity.subsystemregistration": {
       "version": "1.1.1",
       "depth": 1,
@@ -238,8 +234,6 @@
       },
       "url": "https://packages.unity.com"
     },
-=======
->>>>>>> Stashed changes
     "com.unity.test-framework": {
       "version": "1.1.33",
       "depth": 0,
