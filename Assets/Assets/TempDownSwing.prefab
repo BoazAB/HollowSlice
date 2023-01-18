@@ -105,6 +105,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2942886323572940612, guid: c61f508decc601943ab67e777f34f1af, type: 3}
+      propertyPath: m_TagString
+      value: Attack
+      objectReference: {fileID: 0}
     - target: {fileID: 5971352561561187620, guid: c61f508decc601943ab67e777f34f1af, type: 3}
       propertyPath: m_IsTrigger
       value: 1

@@ -585,6 +585,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 435130728}
   m_CullTransparentMesh: 1
+--- !u!1 &573941364
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 573941365}
+  - component: {fileID: 573941366}
+  m_Layer: 0
+  m_Name: hurtbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &573941365
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573941364}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1417552932}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!70 &573941366
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 573941364}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.92, y: 1}
+  m_Direction: 0
 --- !u!1 &587652102
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,7 +1107,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1174,6 +1222,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1170204489}
+  - {fileID: 573941365}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1193,6 +1242,7 @@ MonoBehaviour:
   hitUp: {fileID: 1681190719070440830, guid: 41c5ef0a9a0f80f49a6139fac64a8e14, type: 3}
   hitDown: {fileID: 1825903076941342762, guid: 6523a2cb975d0e740a6fea6dacfe1846, type: 3}
   groundCheck: 0
+  knockback: 10
   attacking: 0
 --- !u!114 &1417552934
 MonoBehaviour:
@@ -1281,6 +1331,7 @@ MonoBehaviour:
   - {fileID: 587652104}
   WholeMask: {fileID: 21300000, guid: c7fc6a1e7b2baf64a85ef70cfaedd576, type: 3}
   BrokenMask: {fileID: 21300000, guid: 66d9878dc01154c4f964ba363d64b885, type: 3}
+  invTimer: 5
 --- !u!1 &1692084166
 GameObject:
   m_ObjectHideFlags: 0
