@@ -165,9 +165,6 @@
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
-    "com.unity.render-pipelines.core": {
-      "version": "13.1.8",
-      "depth": 0,
     "com.unity.recorder": {
       "version": "3.0.3",
       "depth": 0,
@@ -179,7 +176,7 @@
     },
     "com.unity.render-pipelines.core": {
       "version": "13.1.8",
-      "depth": 1,
+      "depth": 0,
       "source": "builtin",
       "dependencies": {
         "com.unity.ugui": "1.0.0",
