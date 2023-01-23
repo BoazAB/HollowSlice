@@ -196,31 +196,14 @@ GameObject:
   - component: {fileID: 472697079}
   - component: {fileID: 472697078}
   - component: {fileID: 472697077}
-  - component: {fileID: 472697076}
+  - component: {fileID: 472697080}
   m_Layer: 0
-  m_Name: spearEnemy (1)
+  m_Name: swordEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &472697076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 472697075}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e3abae3b0c36644cb2033fd71703a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 2144497217}
-  speed: 3
-  spearLeft: {fileID: 1862127757854561397, guid: 78f81022888999647a244dd411b1d053, type: 3}
-  spearLeftPos: {fileID: 436962288}
-  typeAttack: 0
 --- !u!114 &472697077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +284,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472697080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472697075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f15efa8606dcb4c44b512ca536c3e4e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 2144497217}
+  speed: 5
+  spearLeft: {fileID: 0}
+  spearLeftPos: {fileID: 0}
+  typeAttack: 0
 --- !u!1 &719821789
 GameObject:
   m_ObjectHideFlags: 0
