@@ -15,8 +15,12 @@ public class PlayerHealth : MonoBehaviour
     public Sprite WholeMask;
     public Sprite BrokenMask;
 
-    private float invTime;
+    public float invTime;
     public float invTimer;
+
+    public Rigidbody2D playerRigidbody;
+    public int knockback;
+    private int thornTime;
 
     // Start is called before the first frame update
     void Start()
@@ -55,27 +59,30 @@ public class PlayerHealth : MonoBehaviour
                 Masks[i].enabled = false;
             }
         }
+        if (invTimer > 0)
+        {
+            invTimer -= Time.deltaTime;
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D hurtbox)
+    private void OnTriggerEnter2D(Collider2D hurtbox)
     {
-        if (hurtbox.gameObject.tag == "Enemy")
+        if (invTimer <= 0 && hurtbox.gameObject.tag == "Enemy")
         {
-            Debug.Log("everybody wants to be, my");
             GotHit();
         }
     }
 
     private void GotHit()
     {
-        if (invTime > 0)
-        {
-            invTime -= Time.deltaTime;
-        }
-        else
-        {
             HP--;
             invTimer = invTime;
-        }
+            playerRigidbody.velocity = Vector2.right * knockback + Vector2.up * knockback;
+            Invoke(nameof(Thorns), 5.0f);
+    }
+
+    private void Thorns()
+    {
+        
     }
 }
