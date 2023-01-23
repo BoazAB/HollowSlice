@@ -7,6 +7,7 @@ public class spearPrefabScript : MonoBehaviour
     private GameObject player;
     private Rigidbody2D rb;
     public float force;
+    public float speedOfSpear;
     // Start is called before the first frame update
     void Start()
     {

@@ -8,6 +8,7 @@ public class spearEnemyNew : MonoBehaviour
     public float speed;
     public GameObject spearLeft;
     public Transform spearLeftPos;
+    public int typeAttack = 0;
 
 
     private float distance;
@@ -43,7 +44,7 @@ public class spearEnemyNew : MonoBehaviour
 
         float distance = Vector2.Distance(transform.position, player.transform.position);
 
-        Debug.Log(distance);
+        /*Debug.Log(distance); */
 
         Vector2 direction = player.transform.position - transform.position;
 
@@ -58,8 +59,17 @@ public class spearEnemyNew : MonoBehaviour
 
             if (timer > 2)
             {
+
+                typeAttack = Random.Range(1, 2);
+
                 timer = 0;
                 shoot();
+
+                /*
+                timer = 0;
+                lounge();
+                */
+                
             }
         }
 
@@ -69,5 +79,12 @@ public class spearEnemyNew : MonoBehaviour
     {
         Instantiate(spearLeft, spearLeftPos.position, Quaternion.identity);
     }
+
+    /*
+    void lounge()
+    {
+        Debug.Log("TestTestTest");
+    }
+    */
 
 }
