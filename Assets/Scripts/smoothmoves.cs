@@ -33,7 +33,7 @@ public class smoothmoves : MonoBehaviour
     [SerializeField] private float dashtime;
     [SerializeField] private float startdashtime;
     private int direction;
-    private int realdire;
+
 
     void Start()
     {
@@ -52,21 +52,17 @@ public class smoothmoves : MonoBehaviour
     {
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
-
-            Debug.Log(direction);
         if (direction == 0)
         {
             if (Input.GetKey(KeyCode.LeftArrow))
             {
                 direction = 1;
-                realdire = 1;
-                Debug.Log("left");
+
             }
             else if (Input.GetKey(KeyCode.RightArrow))
             {
                 direction = 2;
-                realdire = 2;
-                Debug.Log("right");
+
             }
         }
         else
@@ -81,13 +77,13 @@ public class smoothmoves : MonoBehaviour
             else
             {
                 dashtime -= Time.deltaTime;
-                if (realdire == 1 && Input.GetKeyDown(KeyCode.C))
+                if (Input.GetKeyDown(KeyCode.C) && direction == 1)
                 {
                     dashtime = startdashtime;
                     playerRigidbody.velocity = Vector2.left * dashSpeed;
                     playerRigidbody.gravityScale = 0;
                 }
-                if (realdire == 2 && Input.GetKeyDown(KeyCode.C))
+                if (Input.GetKeyDown(KeyCode.C) && direction == 2)
                 {
                     dashtime = startdashtime;
                     playerRigidbody.velocity = Vector2.right * dashSpeed;
@@ -95,6 +91,7 @@ public class smoothmoves : MonoBehaviour
                 }
             }
         }
+
     }
     void Movement()
     {
@@ -125,7 +122,6 @@ public class smoothmoves : MonoBehaviour
             jumping = true;
             jumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
-            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && jumping == true)
@@ -149,7 +145,6 @@ public class smoothmoves : MonoBehaviour
         {
             secjumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
-            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && (onground == false && secjump == true))
@@ -191,5 +186,7 @@ public class smoothmoves : MonoBehaviour
          {
              transform.position += Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
          }*/
+
+      
     }
 }
