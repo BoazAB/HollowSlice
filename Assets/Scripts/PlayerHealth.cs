@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -17,10 +18,10 @@ public class PlayerHealth : MonoBehaviour
 
     public float invTime;
     public float invTimer;
+    private Vector3 rightPlace;
 
     public Rigidbody2D playerRigidbody;
     public int knockback;
-    private int thornTime;
 
     // Start is called before the first frame update
     void Start()
@@ -77,12 +78,7 @@ public class PlayerHealth : MonoBehaviour
     {
             HP--;
             invTimer = invTime;
-            playerRigidbody.velocity = Vector2.right * knockback + Vector2.up * knockback;
-            Invoke(nameof(Thorns), 5.0f);
-    }
-
-    private void Thorns()
-    {
-        
+            Thread.Sleep(50);
+            playerRigidbody.velocity = Vector2.left * knockback + Vector2.up * knockback;
     }
 }
