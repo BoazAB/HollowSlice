@@ -176,7 +176,7 @@ public class smoothmoves : MonoBehaviour
 
         }
     }
-
+    
     void Dash()
     {
         /*dashright = new Vector3(dashdish, 0, 0);
