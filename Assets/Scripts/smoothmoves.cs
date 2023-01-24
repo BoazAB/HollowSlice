@@ -30,15 +30,16 @@ public class smoothmoves : MonoBehaviour
 
     [Header("dash")]
     [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashdish;
+    [SerializeField] private float dashtime;
+    [SerializeField] private float startdashtime;
     private int direction;
-    private Vector3 dashright;
-    private Vector3 dashleft;
+    private int realdire;
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         state = GetComponent<SwingNail>();
+
     }
 
     
@@ -49,18 +50,51 @@ public class smoothmoves : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            direction = 1;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = 2;
-        }
-
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
-        Dash();      
+
+            Debug.Log(direction);
+        if (direction == 0)
+        {
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                direction = 1;
+                realdire = 1;
+                Debug.Log("left");
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                direction = 2;
+                realdire = 2;
+                Debug.Log("right");
+            }
+        }
+        else
+        {
+            if (dashtime <= 0)
+            {
+                direction = 0;
+                dashtime = startdashtime;
+                playerRigidbody.velocity = Vector2.zero;
+                playerRigidbody.gravityScale = 3.5f;
+            }
+            else
+            {
+                dashtime -= Time.deltaTime;
+                if (realdire == 1 && Input.GetKeyDown(KeyCode.C))
+                {
+                    dashtime = startdashtime;
+                    playerRigidbody.velocity = Vector2.left * dashSpeed;
+                    playerRigidbody.gravityScale = 0;
+                }
+                if (realdire == 2 && Input.GetKeyDown(KeyCode.C))
+                {
+                    dashtime = startdashtime;
+                    playerRigidbody.velocity = Vector2.right * dashSpeed;
+                    playerRigidbody.gravityScale = 0;
+                }
+            }
+        }
     }
     void Movement()
     {
@@ -145,17 +179,17 @@ public class smoothmoves : MonoBehaviour
 
     void Dash()
     {
-       dashright = new Vector3(dashdish, 0, 0);
-       dashleft = new Vector3(dashdish,0, 0);
+        /*dashright = new Vector3(dashdish, 0, 0);
+        dashleft = new Vector3(dashdish,0, 0);
 
-        if (direction == 1 && Input.GetKeyDown(KeyCode.C) )
-        {
-            transform.position = Vector3.MoveTowards(transform.position, dashleft, dashSpeed * Time.deltaTime);
-        }
+         if (direction == 1 && Input.GetKeyDown(KeyCode.C) )
+         {
+             transform.position = Vector3.MoveTowards(transform.position, dashleft, dashSpeed * Time.deltaTime);
+         }
 
-        if (direction == 2 && Input.GetKeyDown(KeyCode.C))
-        {
-            transform.position = Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
-        }
+         if (direction == 2 && Input.GetKeyDown(KeyCode.C))
+         {
+             transform.position += Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
+         }*/
     }
 }
