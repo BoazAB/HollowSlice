@@ -150,12 +150,12 @@ public class smoothmoves : MonoBehaviour
 
         if (direction == 1 && Input.GetKeyDown(KeyCode.C) )
         {
-            transform.position += Vector3.MoveTowards(transform.position, dashleft, dashSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, dashleft, dashSpeed * Time.deltaTime);
         }
 
         if (direction == 2 && Input.GetKeyDown(KeyCode.C))
         {
-            transform.position += Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
         }
     }
 }
