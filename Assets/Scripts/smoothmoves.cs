@@ -30,9 +30,10 @@ public class smoothmoves : MonoBehaviour
 
     [Header("dash")]
     [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashTime;
-    private float dashTimecount;
+    [SerializeField] private float dashdish;
     private int direction;
+    private Vector3 dashright;
+    private Vector3 dashleft;
 
     void Start()
     {
@@ -59,11 +60,7 @@ public class smoothmoves : MonoBehaviour
 
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Dash();
-            playerRigidbody.gravityScale = 3.5f;
-        }
+        Dash();      
     }
     void Movement()
     {
@@ -148,16 +145,17 @@ public class smoothmoves : MonoBehaviour
 
     void Dash()
     {
-        if (direction == 1 )
+       dashright = new Vector3(dashdish, 0, 0);
+       dashleft = new Vector3(dashdish,0, 0);
+
+        if (direction == 1 && Input.GetKeyDown(KeyCode.C) )
         {
-                playerRigidbody.velocity = Vector2.left * dashSpeed;
-                playerRigidbody.gravityScale = 0;
+            transform.position += Vector3.MoveTowards(transform.position, dashleft, dashSpeed * Time.deltaTime);
         }
 
-        if (direction == 2 )
+        if (direction == 2 && Input.GetKeyDown(KeyCode.C))
         {
-                playerRigidbody.velocity = Vector2.right * dashSpeed;
-                playerRigidbody.gravityScale = 0;
+            transform.position += Vector3.MoveTowards(transform.position, -dashleft, dashSpeed * Time.deltaTime);
         }
     }
 }
