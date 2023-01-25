@@ -30,14 +30,16 @@ public class smoothmoves : MonoBehaviour
 
     [Header("dash")]
     [SerializeField] private float dashSpeed;
-    [SerializeField] private float dashTime;
-    private float dashTimecount;
+    [SerializeField] private float dashtime;
+    [SerializeField] private float startdashtime;
     private int direction;
+
 
     void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         state = GetComponent<SwingNail>();
+
     }
 
     
@@ -48,22 +50,10 @@ public class smoothmoves : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            direction = 1;
-        }
-        else if (Input.GetKey(KeyCode.RightArrow))
-        {
-            direction = 2;
-        }
-
         onground = Physics2D.OverlapCircle(point.position, radius, groundstuff);
         Jump();
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            Dash();
-            playerRigidbody.gravityScale = 3.5f;
-        }
+        Dash();
+
     }
     void Movement()
     {
@@ -94,7 +84,6 @@ public class smoothmoves : MonoBehaviour
             jumping = true;
             jumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
-            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && jumping == true)
@@ -118,7 +107,6 @@ public class smoothmoves : MonoBehaviour
         {
             secjumpTimeCount = jumpTime;
             playerRigidbody.velocity = Vector2.up * jumpheigt;
-            playerRigidbody.gravityScale = 3.5f;
         }
 
         if (Input.GetKey(KeyCode.Z) && (onground == false && secjump == true))
@@ -145,19 +133,46 @@ public class smoothmoves : MonoBehaviour
 
         }
     }
-
+    
     void Dash()
     {
-        if (direction == 1 )
+        if (direction == 0)
         {
-                playerRigidbody.velocity = Vector2.left * dashSpeed;
-                playerRigidbody.gravityScale = 0;
-        }
+            if (Input.GetKey(KeyCode.LeftArrow))
+            {
+                direction = 1;
 
-        if (direction == 2 )
+            }
+            else if (Input.GetKey(KeyCode.RightArrow))
+            {
+                direction = 2;
+
+            }
+        }
+        else
         {
-                playerRigidbody.velocity = Vector2.right * dashSpeed;
-                playerRigidbody.gravityScale = 0;
+            if (dashtime <= 0)
+            {
+                direction = 0;
+                dashtime = startdashtime;
+                playerRigidbody.gravityScale = 3.5f;
+            }
+            else
+            {
+                dashtime -= Time.deltaTime;
+                if (Input.GetKeyDown(KeyCode.C) && direction == 1)
+                {
+                    dashtime = startdashtime;
+                    playerRigidbody.velocity = Vector2.left * dashSpeed;
+                    playerRigidbody.gravityScale = 0;
+                }
+                if (Input.GetKeyDown(KeyCode.C) && direction == 2)
+                {
+                    dashtime = startdashtime;
+                    playerRigidbody.velocity = Vector2.right * dashSpeed;
+                    playerRigidbody.gravityScale = 0;
+                }
+            }
         }
     }
 }

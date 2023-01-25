@@ -19,15 +19,19 @@ public class SwingNail : MonoBehaviour
     private bool down;
 
     [SerializeField]
-    private int knockback;
+    public int hitKnockback;
     private Rigidbody2D playerRigidbody;
+
+    private PlayerHealth inv;
 
 
     public bool attacking;
+
     private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
         move = GetComponent<smoothmoves>();
+        inv = GetComponent<PlayerHealth>();
     }
     void Update()
     {
@@ -68,38 +72,42 @@ public class SwingNail : MonoBehaviour
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y - 1, this.gameObject.transform.rotation.z);
             var downHit = Instantiate(hitDown, rightPlace, Quaternion.identity);
+            inv.invTimer = 0.5f;
             downHit.transform.parent = this.gameObject.transform;
-            Destroy(downHit, 1);
-            StartCoroutine(waitToHit());
+            Destroy(downHit, 0.5f);
+            StartCoroutine(WaitToHit());
         }
         else if (up == true)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x, this.gameObject.transform.position.y + 1, this.gameObject.transform.rotation.z);
             var newHit = Instantiate(hitUp, rightPlace, Quaternion.identity);
+            inv.invTimer = 0.5f;
             newHit.transform.parent = this.gameObject.transform;
-            Destroy(newHit, 1);
-            StartCoroutine(waitToHit());
+            Destroy(newHit, 0.5f);
+            StartCoroutine(WaitToHit());
         }
         else if (facingRight)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x + 1f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
             var newHit = Instantiate(hitLine, rightPlace, Quaternion.identity.normalized);
+            inv.invTimer = 0.5f;
             newHit.transform.parent = this.gameObject.transform;
-            Destroy(newHit, 1);
-            StartCoroutine(waitToHit());
+            Destroy(newHit, 0.5f);
+            StartCoroutine(WaitToHit());
         }
         else if (!facingRight)
         {
             rightPlace = new Vector3(this.gameObject.transform.position.x + -1f, this.gameObject.transform.position.y, this.gameObject.transform.position.z);
             var newHit = Instantiate(hitLine, rightPlace, Quaternion.Euler(0, 180, 0));
+            inv.invTimer = 0.3f;
             newHit.transform.parent = this.gameObject.transform;
-            Destroy(newHit, 1);
-            StartCoroutine(waitToHit());
+            Destroy(newHit, 0.3f);
+            StartCoroutine(WaitToHit());
         }
     }
-    IEnumerator waitToHit()
+    IEnumerator WaitToHit()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         attacking = false;
     }
 
@@ -108,7 +116,7 @@ public class SwingNail : MonoBehaviour
         if (coll.tag == "Enemy" && groundCheck == false && down == true)
         {
             Debug.Log("knockback");
-            playerRigidbody.velocity = Vector2.up * knockback;
+            playerRigidbody.velocity = Vector2.up * hitKnockback;
         }
     }
 }

@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class swordScript : MonoBehaviour
 {
 
     //Laat de aanpassende snelheid zien
     [SerializeField]
-    float health, maxHealth = 1f;
+    
 
     //Array of waypoints to walk from one to the other
     [SerializeField]
@@ -67,15 +68,88 @@ public class swordScript : MonoBehaviour
         Debug.Log("Move");
     }
 
+*/
+
+public class swordScript : MonoBehaviour
+{
+    public GameObject player;
+    public float speed;
+    public GameObject spearLeft;
+    public Transform spearLeftPos;
+    public int typeAttack = 0;
+    float health, maxHealth = 1f;
+
+
+    private float distance;
+    private float timer;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
+    /* private void Update()
+    {
+        
+    }
+    */
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 scale = transform.localScale;
+
+        if (player.transform.position.x > transform.position.x)
+        {
+            scale.x = Mathf.Abs(scale.x) * -1;
+        }
+        else
+        {
+            scale.x = Mathf.Abs(scale.x);
+        }
+
+        transform.localScale = scale;
+
+        float distance = Vector2.Distance(transform.position, player.transform.position);
+
+        /*Debug.Log(distance); */
+
+        Vector2 direction = player.transform.position - transform.position;
+
+        transform.position = Vector2.MoveTowards(this.transform.position, player.transform.position, speed * Time.deltaTime);
+
+
+        float distanceEnemyAndPlayer = Vector2.Distance(transform.position, player.transform.position);
+
+
+    }
     public void TakeDamage(float damageAmount)
     {
         //Health is being reduced
         health -= damageAmount;
 
         //enemy will be destroyed if health reaches 0
-        if(health <= 0)
+        if (health <= 0)
         {
             Destroy(gameObject);
         }
     }
 }
+
+
+
+    
+    /*
+    void shoot()
+    {
+        Instantiate(spearLeft, spearLeftPos.position, Quaternion.identity);
+    }
+    8/
+
+    /*
+    void lounge()
+    {
+        Debug.Log("TestTestTest");
+    }
+    */
