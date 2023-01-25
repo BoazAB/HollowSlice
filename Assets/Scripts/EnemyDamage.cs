@@ -20,7 +20,7 @@ public class EnemyDamage : MonoBehaviour
         if (collision.tag == "Attack")
         {
             Debug.Log("BEPEOEPEO");
-            /*Destroy(this.gameObject);*/
+            Destroy(this.gameObject);
         }
     }
 }
