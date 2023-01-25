@@ -533,7 +533,7 @@ MonoBehaviour:
   spearLeft: {fileID: 1862127757854561397, guid: 78f81022888999647a244dd411b1d053, type: 3}
   spearLeftPos: {fileID: 30184219}
   typeAttack: 0
-  loungeSpeed: 6
+  loungeSpeed: 15
   castPoint: {fileID: 1379085484}
 --- !u!1 &2144497217
 GameObject:

@@ -17,7 +17,7 @@ public class spearEnemyNew : MonoBehaviour
     [SerializeField]
     float loungeSpeed;
 
-    Rigidbody2D rb2d;
+    public Rigidbody2D rb2d;
 
     [SerializeField]
     Transform castPoint;
@@ -25,7 +25,7 @@ public class spearEnemyNew : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("placeHolderPlayer");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     /* private void Update()
@@ -61,7 +61,7 @@ public class spearEnemyNew : MonoBehaviour
 
         float distanceEnemyAndPlayer = Vector2.Distance(transform.position, player.transform.position);
 
-        if (distance < 8)
+        if (distance < 10)
         {
             timer += Time.deltaTime;
 
@@ -79,6 +79,18 @@ public class spearEnemyNew : MonoBehaviour
                 */
 
             }
+            if (distance < 3)
+            {
+                timer+= Time.deltaTime;
+
+                if (timer > 10)
+                {
+                    loungeAtPlayer(distance, rb2d);
+                }
+            }
+
+           
+
         }
 
         //if (loungeAtPlayer(agro))
@@ -90,8 +102,8 @@ public class spearEnemyNew : MonoBehaviour
         Instantiate(spearLeft, spearLeftPos.position, Quaternion.identity);
     }
 
-    /*
-    void loungePlayer
+    
+    /*void loungePlayer()
     {
         if (Transform.position.x < player.position.x)
         {
@@ -105,14 +117,27 @@ public class spearEnemyNew : MonoBehaviour
     }
     */
 
-    bool loungeAtPlayer(float distance)
+    void loungeAtPlayer(float distance, Rigidbody2D rb2d)
     {
-        bool val = false;
+        Debug.Log("lounce 2");
+
+        if (transform.position.x < player.transform.position.x)
+        {
+            Debug.Log("lounce");
+            rb2d.velocity = new Vector2(loungeSpeed, 0);
+        }
+        else if (transform.position.x > player.transform.position.x)
+        {
+            Debug.Log("lounce");
+            rb2d.velocity = new Vector2(-loungeSpeed, 0);
+        }
+
+        //bool val = false;
         float castDist = distance;
 
         Vector2 endPos = castPoint.position + Vector3.right * distance;
         RaycastHit2D hit = Physics2D.Linecast(castPoint.position, endPos, 1 << LayerMask.NameToLayer("action"));
-
+        /*
         if(hit.collider != null)
         {
             if (hit.collider.gameObject.CompareTag("placeHolderPlayer"))
@@ -126,6 +151,7 @@ public class spearEnemyNew : MonoBehaviour
         }
 
         return val;
+        */
 
     }
 
