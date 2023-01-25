@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading;
 
 public class PlayerHealth : MonoBehaviour
 {
