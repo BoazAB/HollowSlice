@@ -15876,7 +15876,8 @@ MonoBehaviour:
   jumpheigt: 10
   maxjump: 0
   dashSpeed: 20
-  dashTime: 1
+  dashtime: 0
+  startdashtime: 0
 --- !u!212 &1818044114
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15958,8 +15959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitLine: {fileID: 425797169091171392, guid: d28ee3c97201b7b4f91f0545ff4f3385, type: 3}
-  hitUp: {fileID: 0}
-  hitDown: {fileID: 0}
+  hitUp: {fileID: 1681190719070440830, guid: 41c5ef0a9a0f80f49a6139fac64a8e14, type: 3}
+  hitDown: {fileID: 1825903076941342762, guid: 6523a2cb975d0e740a6fea6dacfe1846, type: 3}
   groundCheck: 0
   knockback: 0
   attacking: 0

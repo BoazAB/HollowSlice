@@ -17,7 +17,7 @@ public class spearEnemyNew : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("placeHolderPlayer");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     /* private void Update()
