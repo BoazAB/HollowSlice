@@ -71,7 +71,6 @@ public class smoothmoves : MonoBehaviour
             {
                 direction = 0;
                 dashtime = startdashtime;
-                playerRigidbody.velocity = Vector2.zero;
                 playerRigidbody.gravityScale = 3.5f;
             }
             else
